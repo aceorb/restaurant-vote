@@ -1,0 +1,17 @@
+# mypy global options:
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+exclude = "venv/.*\\.py"
+
+[tool.django-stubs]
+django_settings_module = "restaurant_vote.settings"
+
+[[tool.mypy.overrides]]
+module = [
+    "drf_yasg",
+    "drf_yasg.views",
+    "drf_yasg.utils",
+    "environ",
+    "rest_framework.routers"
+]
+ignore_missing_imports = true
