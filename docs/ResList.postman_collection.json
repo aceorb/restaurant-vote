@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "98640e4f-7640-4904-8861-ab2052860c3f",
+		"name": "ResList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37087954"
+	},
+	"item": [
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Restaurant List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/restaurants/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Retrieve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/restaurants/1/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/restaurants/1/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Restaurant\",\n  \"owner_id\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/restaurants/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Get Current Day Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/menus/current-day-menu/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"menus",
+								"current-day-menu",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2024-09-26\",\n  \"items\": \"Field, Nature, Natural\",\n  \"restaurant\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/menus/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"menus",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JwtAuth",
+			"item": [
+				{
+					"name": "Generate Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"employee1\",\n    \"password\": \"123qwe!@#QWE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/token/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3MjQ1MzU4LCJpYXQiOjE3MjcyNDM1NTgsImp0aSI6IjIxODRlYmE1N2VjOTRlYjRiMzgxMGJhZjhhZTZlYzg3IiwidXNlcl9pZCI6MTZ9.OBdyiVCH3bpzYXZJR8dDt_qyEBeoK9E5ohfyWWh0rCI\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/token/verify/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"token",
+								"verify",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Token-Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"adminpassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/token/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Token-Rest Owener",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"rest_owner1\",\n    \"password\": \"123qwe!@#QWE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/token/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Employee Add",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vote",
+			"item": [
+				{
+					"name": "Cast Vote v1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; version=v1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"menu_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/votes/cast-vote/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"votes",
+								"cast-vote",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cast Vote v2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; version=v2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"top_menus\": [\n        {\"menu_id\": 1, \"points\": 3},\n        {\"menu_id\": 2, \"points\": 2},\n        {\"menu_id\": 3, \"points\": 1}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/votes/cast-vote/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"votes",
+								"cast-vote",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Result of Current Day",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/votes/my-vote/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"votes",
+								"my-vote",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All votes results",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/votes/all-votes-results/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"votes",
+								"all-votes-results",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/votes/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"votes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{AUTH_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "AUTH_TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
