@@ -97,7 +97,7 @@ Mobile app always sends build version in headers.
     - Restaurant Owner
         - username: rest_owner1
         - password: 123qwe!@#QWE
-6. Generate JWT Token from http://localhost:8000/token/ with username and password.
+6. Generate JWT Token from http://localhost:8000/api/token/ with username and password.
 
 7. Call APIs with Bearer Token Authentication using generated JWT Token.
 
@@ -110,4 +110,5 @@ sudo docker-compose exec web python manage.py test
 [ResList.postman_collection.json](docs/ResList.postman_collection.json)
 
 ## HA Cloud Architecture Diagram
+[Diagram on azurediagrams.com](https://azurediagrams.com/VwCs539m)
 ![HA Cloud Diagram.png](docs/HA%20Cloud%20Diagram.png)
