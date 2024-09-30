@@ -11,7 +11,6 @@ module = [
     "drf_yasg",
     "drf_yasg.views",
     "drf_yasg.utils",
-    "environ",
-    "rest_framework.routers"
+    "environ"
 ]
 ignore_missing_imports = true
